@@ -1,0 +1,91 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>
+</help_text><element><id>UMLClass</id><coordinates><x>504</x><y>54</y><w>216</w><h>144</h></coordinates><panel_attributes>ViewElement
+--
+-id: string
+-div: HtmlDivElement
+-activateCallback
+--
++constructor(id: string)
++ appendTo(parent: HtmlElement)
++ navigate(value: string): void
++ get id(): string
++ get div(): HtmlDivElement
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>423</x><y>270</y><w>234</w><h>99</h></coordinates><panel_attributes>Table
+--
+-manager: Manager
+--
+constructor(id: string, manager: Manager)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>270</y><w>414</w><h>99</h></coordinates><panel_attributes>Form
+--
+-manager: Manager
+-formInputList: FormInput[]
+--
++ constructor(id: string, formFieldList: FormFieldType[], manager: Manager)
+-createElement(): ColorType</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>792</x><y>432</y><w>189</w><h>153</h></coordinates><panel_attributes>FormInput
+--
+-inputElement: HtmlInput
+-errordiv: HtlmDivElement
+- name: string
+--
++constructor(id: string, label: string, 
+name: string, 
+parent: HtmlFormElement)
++validate(): boolean
+get name(): string
+get value(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>360</y><w>45</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>45</x><y>270</y><w>333</w><h>108</h></coordinates><panel_attributes>NavigationBar
+--
+- viewElementList: ViewElement[]
+--
++ navigate(value: string)
++ addViewElement(label: string, vievElement: ViewElement )
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>207</x><y>189</y><w>387</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>410;10;410;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>189</y><w>117</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>189</y><w>234</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;240;60;240;90</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>117</y><w>387</w><h>171</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>410;10;10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>99</y><w>162</w><h>45</h></coordinates><panel_attributes>ActivateCallback
+--
+():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>711</x><y>108</y><w>243</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+navigate hívja, ha implementálva van</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>351</x><y>621</y><w>279</w><h>180</h></coordinates><panel_attributes>Manager
+--
+- list: Color[]
+- renderCallback: RenderCallback
+--
++ constructor()
++ getAllElement(): void
++ addElement(elem: ColorType)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>81</x><y>639</y><w>126</w><h>126</h></coordinates><panel_attributes>Color
+--
+-id: number
+- color: string
+--
+get id(): number
+set id(value: number)
+get color(): string
+set color(value: string)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>648</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>486</y><w>90</w><h>81</h></coordinates><panel_attributes>ColorType
+--
+szin: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>360</y><w>99</w><h>144</h></coordinates><panel_attributes>lt=&lt;.
+előállítja</panel_attributes><additional_attributes>20;140;20;50;90;50;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>621</x><y>558</y><w>207</w><h>189</h></coordinates><panel_attributes>lt=&lt;.
+Átalakítja Color osztállyá</panel_attributes><additional_attributes>70;10;70;190;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>405</x><y>441</y><w>153</w><h>45</h></coordinates><panel_attributes>RenderCallback
+--
+(Color[]) :void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>441</x><y>360</y><w>99</w><h>99</h></coordinates><panel_attributes>lt=&lt;.
+Implementálja</panel_attributes><additional_attributes>70;90;70;60;50;60;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>477</y><w>153</w><h>162</h></coordinates><panel_attributes>lt=&lt;-
+meghívja a getAllElement</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1233</x><y>639</y><w>333</w><h>153</h></coordinates><panel_attributes>A form submitja meghívja az addElementet
+
+A Color példány id tulajdonsága a tömb aktuális nagysága
+
+A Managerben üres tömbként inicializáljuk a tömböt
+
+A table activateCallbackje meghívja a getAllElementet,
+ hogy mindig a legfrissebb listát lássuk.
+
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1026</x><y>162</y><w>171</w><h>72</h></coordinates><panel_attributes>FormFieldType
+--
+id: string
+label: string
+name: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>963</x><y>225</y><w>153</w><h>63</h></coordinates><panel_attributes>lt=&lt;.
+FormInputot állít elő belőle</panel_attributes><additional_attributes>140;10;140;30;20;30;20;50</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>360</y><w>450</w><h>423</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;450;480;450;480;10</additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>360</y><w>153</w><h>279</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;290;150;170;10;170;10;70;150;70;150;10</additional_attributes></element></diagram>
