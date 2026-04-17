@@ -1,5 +1,5 @@
-<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><help_text>
-</help_text><element><id>UMLClass</id><coordinates><x>672</x><y>264</y><w>360</w><h>192</h></coordinates><panel_attributes>ViewElement
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>
+</help_text><element><id>UMLClass</id><coordinates><x>678</x><y>162</y><w>180</w><h>96</h></coordinates><panel_attributes>ViewElement
 --
 -id: string
 -div: HtmlDivElement
@@ -12,20 +12,20 @@
 + get div(): HtmlDivElement
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>552</y><w>384</w><h>132</h></coordinates><panel_attributes>Table
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>306</y><w>192</w><h>66</h></coordinates><panel_attributes>Table
 --
 -manager: Manager
 --
 constructor(id: string, manager: Manager,
 navigationBar: NavigationBar)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>972</x><y>552</y><w>552</w><h>144</h></coordinates><panel_attributes>Form
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>828</x><y>306</y><w>276</w><h>72</h></coordinates><panel_attributes>Form
 --
 -manager: Manager
 -formInputList: FormInput[]
 -szinparam?: EditColorType
 --
 + constructor(id: string, formFieldList: FormFieldType[], manager: Manager)
--createElement(): ColorType</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1140</x><y>768</y><w>228</w><h>252</h></coordinates><panel_attributes>FormInput
+-createElement(): ColorType</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>912</x><y>414</y><w>114</w><h>126</h></coordinates><panel_attributes>FormInput
 --
 -inputElement: HtmlInput
 -errordiv: HtlmDivElement
@@ -37,19 +37,19 @@ parent: HtmlFormElement)
 +validate(): boolean
 get name(): string
 get value(): string
-set value(newValue: string)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1236</x><y>684</y><w>60</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..*</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>552</y><w>420</w><h>144</h></coordinates><panel_attributes>NavigationBar
+set value(newValue: string)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>372</y><w>30</w><h>54</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>306</y><w>210</w><h>72</h></coordinates><panel_attributes>NavigationBar
 --
 - viewElementList: ViewElement[]
 --
 + activate(value: string, param: ParamType)
 + addViewElement(label: string, viewElement: ViewElement )
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>444</y><w>516</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>410;10;410;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>444</y><w>156</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>444</y><w>312</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;240;60;240;90</additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>348</y><w>432</w><h>228</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..*</panel_attributes><additional_attributes>340;10;10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1332</x><y>324</y><w>216</w><h>60</h></coordinates><panel_attributes>ActivateCallback
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>252</y><w>258</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>410;10;410;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>252</y><w>78</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>762</x><y>252</y><w>156</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;240;60;240;90</additional_attributes></element><element><id>Relation</id><coordinates><x>474</x><y>204</y><w>216</w><h>114</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>340;10;10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1008</x><y>192</y><w>108</w><h>30</h></coordinates><panel_attributes>ActivateCallback
 --
-(param?: ParamType):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>336</y><w>336</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
-navigate hívja, ha implementálva van</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>1020</y><w>372</w><h>240</h></coordinates><panel_attributes>Manager
+(param?: ParamType):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>852</x><y>198</y><w>168</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+navigate hívja, ha implementálva van</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>540</y><w>186</w><h>120</h></coordinates><panel_attributes>Manager
 --
 - list: Color[]
 - renderCallback: RenderCallback
@@ -59,7 +59,7 @@ navigate hívja, ha implementálva van</panel_attributes><additional_attributes>
 + addElement(elem: ColorType): void
 + getElementById(id: number): ColorType
 + updateElement(id: number, elem: ColorType): void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>1044</y><w>168</w><h>168</h></coordinates><panel_attributes>Color
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>438</x><y>552</y><w>84</w><h>84</h></coordinates><panel_attributes>Color
 --
 -id: number
 - color: string
@@ -68,17 +68,17 @@ get id(): number
 set id(value: number)
 get color(): string
 set color(value: string)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>348</x><y>1056</y><w>228</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>516</x><y>558</y><w>114</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
 m1=0..*
-</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>948</x><y>840</y><w>120</w><h>108</h></coordinates><panel_attributes>ColorType
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>450</y><w>60</w><h>54</h></coordinates><panel_attributes>ColorType
 --
-szin: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>984</x><y>684</y><w>132</w><h>180</h></coordinates><panel_attributes>lt=&lt;.
-előállítja</panel_attributes><additional_attributes>20;130;20;40;90;40;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>936</y><w>276</w><h>252</h></coordinates><panel_attributes>lt=&lt;.
-Átalakítja Color osztállyá</panel_attributes><additional_attributes>70;10;70;190;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>624</x><y>780</y><w>204</w><h>60</h></coordinates><panel_attributes>RenderCallback
+szin: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>834</x><y>372</y><w>66</w><h>90</h></coordinates><panel_attributes>lt=&lt;.
+előállítja</panel_attributes><additional_attributes>20;130;20;40;90;40;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>798</x><y>498</y><w>138</w><h>126</h></coordinates><panel_attributes>lt=&lt;.
+Átalakítja Color osztállyá</panel_attributes><additional_attributes>70;10;70;190;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>654</x><y>420</y><w>102</w><h>30</h></coordinates><panel_attributes>RenderCallback
 --
-(Color[]) :void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>672</y><w>132</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
-Implementálja</panel_attributes><additional_attributes>70;90;70;60;50;60;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>828</y><w>204</w><h>216</h></coordinates><panel_attributes>lt=&lt;-
-meghívja a getAllElement</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1728</x><y>936</y><w>540</w><h>312</h></coordinates><panel_attributes>A Form kap egy új tulajdonságot, amelynek nem mindig van értéke
+(Color[]) :void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>678</x><y>366</y><w>66</w><h>66</h></coordinates><panel_attributes>lt=&lt;.
+Implementálja</panel_attributes><additional_attributes>70;90;70;60;50;60;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>444</y><w>102</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+meghívja a getAllElement</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1206</x><y>498</y><w>270</w><h>156</h></coordinates><panel_attributes>A Form kap egy új tulajdonságot, amelynek nem mindig van értéke
 
 A Table activateCallback implementációján a korábbiakhoz képest
 nem kell változtatni
@@ -96,22 +96,22 @@ ugyanis amennyiben van, biztosan elemet szerkesztünk, ha pedig nincs,
 akkor új elemet fűzünk hozzá a listához.
 
 
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1452</x><y>408</y><w>228</w><h>96</h></coordinates><panel_attributes>FormFieldType
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1068</x><y>234</y><w>114</w><h>48</h></coordinates><panel_attributes>FormFieldType
 --
 id: string
 label: string
-name: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1368</x><y>492</y><w>204</w><h>84</h></coordinates><panel_attributes>lt=&lt;.
-FormInputot állít elő belőle</panel_attributes><additional_attributes>140;10;140;30;20;30;20;50</additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>684</y><w>600</w><h>552</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;440;480;440;480;10</additional_attributes></element><element><id>Relation</id><coordinates><x>492</x><y>672</y><w>204</w><h>372</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;290;150;170;10;170;10;70;150;70;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1596</x><y>564</y><w>168</w><h>132</h></coordinates><panel_attributes>EditColorType
+name: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1026</x><y>276</y><w>102</w><h>42</h></coordinates><panel_attributes>lt=&lt;.
+FormInputot állít elő belőle</panel_attributes><additional_attributes>140;10;140;30;20;30;20;50</additional_attributes></element><element><id>Relation</id><coordinates><x>804</x><y>372</y><w>300</w><h>276</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;440;480;440;480;10</additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>366</y><w>102</w><h>186</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;290;150;170;10;170;10;70;150;70;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1140</x><y>312</y><w>84</w><h>66</h></coordinates><panel_attributes>EditColorType
 --
 id: number
-szin: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1512</x><y>624</y><w>108</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..1</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>0</y><w>120</w><h>108</h></coordinates><panel_attributes>ParamType
+szin: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1098</x><y>342</y><w>54</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>762</x><y>30</y><w>60</w><h>54</h></coordinates><panel_attributes>ParamType
 --
-id?: number</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>12</y><w>864</w><h>576</h></coordinates><panel_attributes>lt=&lt;.
-Ennek a segítségével fogja meghívni a viewElementek navigate-jét</panel_attributes><additional_attributes>120;460;120;20;700;20</additional_attributes></element><element><id>Relation</id><coordinates><x>888</x><y>96</y><w>216</w><h>192</h></coordinates><panel_attributes>lt=&lt;.
-az ActivateCallback-et hívja</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>36</x><y>24</y><w>828</w><h>864</h></coordinates><panel_attributes>lt=&lt;.
+id?: number</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>342</x><y>36</y><w>432</w><h>288</h></coordinates><panel_attributes>lt=&lt;.
+Ennek a segítségével fogja meghívni a viewElementek navigate-jét</panel_attributes><additional_attributes>120;460;120;20;700;20</additional_attributes></element><element><id>Relation</id><coordinates><x>786</x><y>78</y><w>108</w><h>96</h></coordinates><panel_attributes>lt=&lt;.
+az ActivateCallback-et hívja</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>42</y><w>414</w><h>432</h></coordinates><panel_attributes>lt=&lt;.
 A Szer-
 kesztésre
  kattintva 
-előállítja</panel_attributes><additional_attributes>450;540;450;590;320;590;320;700;10;700;10;10;670;10</additional_attributes></element><element><id>Relation</id><coordinates><x>948</x><y>12</y><w>1452</w><h>600</h></coordinates><panel_attributes>lt=&lt;.
+előállítja</panel_attributes><additional_attributes>450;540;450;590;320;590;320;700;10;700;10;10;670;10</additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>36</y><w>726</w><h>300</h></coordinates><panel_attributes>lt=&lt;.
 Az activateCallbackben vizsgáljuk, hogy paraméterrel activáltuk-e az oldalt</panel_attributes><additional_attributes>480;480;520;480;520;440;660;440;660;370;770;370;770;10;10;20</additional_attributes></element></diagram>
